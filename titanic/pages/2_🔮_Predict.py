@@ -5,15 +5,15 @@ import numpy as np
 import time
 
 
-model = joblib.load('model.joblib')
-encoder = joblib.load('encoder.joblib')
-scaler = joblib.load('scaler.joblib')
+model = joblib.load('titanic/model.joblib')
+encoder = joblib.load('titanic/encoder.joblib')
+scaler = joblib.load('titanic/scaler.joblib')
 
 
 
 st.title("Titanic Survival Prediction")
 
-st.image("img.jpeg",width=700)
+st.image("titanic/img.jpeg",use_column_width=True)
 
 st.write("Please enter all the details without leaving anything blank")
 
@@ -70,8 +70,8 @@ if st.button("Submit"):
         
     if predic == 0:
         st.info("You would not have survived the titanic")
-        gif_url = 'shinking.gif'  
-        st.image(gif_url, caption='Your GIF Caption', use_column_width=True)
+        gif_url = 'titanic/shinking.gif'  
+        st.image(gif_url, caption='Uh-ohh you drowned', use_column_width=True)
     elif predic == 1:
         st.info("You would have survived the Titanic")
         st.balloons()
