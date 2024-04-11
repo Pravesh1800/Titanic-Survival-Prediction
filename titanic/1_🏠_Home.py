@@ -6,10 +6,6 @@ import time
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-model = joblib.load('model.joblib')
-encoder = joblib.load('encoder.joblib')
-scaler = joblib.load('scaler.joblib')
-
 st.set_page_config(
     page_title="Titanic Survival Prediction",
     page_icon="📈",
@@ -25,7 +21,7 @@ st.write("")
 st.write("")
 col1, col2, col3 = st.columns([1, 2, 1])  # Create columns to center the image
 with col2:
-    st.image('home.png', use_column_width=True)
+    st.image('titanic/home.png', use_column_width=True)
 st.write("")
 st.write("")
 
@@ -63,13 +59,13 @@ st.write("")
 st.write("")
 a1, a2, a3 = st.columns([1, 2, 1])  # Create columns to center the image
 with a2:
-    st.image('analysis.png', use_column_width=True)
+    st.image('titanic/analysis.png', use_column_width=True)
 st.write("")
 st.write("")
 
 # Analysis
 st.write("**This is our training dataset**")
-data = pd.read_csv('train.csv')
+data = pd.read_csv('titanic/train.csv')
 st.write(data)
 st.write("_in survived column (1: Survived 2: Didn't Survived)_")
 
