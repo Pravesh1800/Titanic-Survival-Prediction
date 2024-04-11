@@ -6,6 +6,8 @@ import time
 import seaborn as sns
 import matplotlib.pyplot as plt
 
+st.set_option('theme', 'light')
+
 st.set_page_config(
     page_title="Titanic Survival Prediction",
     page_icon="📈",
